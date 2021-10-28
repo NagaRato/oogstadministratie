@@ -4,7 +4,7 @@ var frontOfficeList = {
 
   addCertificateFromStek: function(certificateLine) {
 
-  }
+  },
 
   addCertificateCustommade: function(certificateLine) {
 
