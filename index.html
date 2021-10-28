@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Oogstadministratie</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="controllers/index.js"></script>
+  </head>
+  <body style='font-family: Arial;'>
+    <h1>Oogstadministratie</h1>
+    <i>Herenboeren op 't Lies</i>
+    <div onclick=index.openPage(1);>1. Balielijst</div>
+    <div class="page" id="page1" style="display: none">
+      Input uit STEK:
+      <table>
+        <tr><td>cert.nrs</td><td>namen</td><td>monden</td></tr>
+        <tr>
+          <td><textarea oninput="index.addedCertificateNumbers();" id="inputcertificatenumbers" rows="8" cols="80"></textarea></td>
+          <td><textarea id="inputnames" rows="8" cols="80"></textarea></td>
+          <td><textarea id="inputmouths" rows="8" cols="80"></textarea></td>
+        </tr>
+      </table>
+      <button id="inputButton" onclick=index.renderFrontOfficeList();>Toon balielijst</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;Laagste certificaatnummer:<input id="inputLowestCertiNr" min=0 type="number" />
+      &nbsp;&nbsp;&nbsp;&nbsp;Hoogste certificaatnummer: <input id="inputHighestCertiNr" type="number" />
+      <table id="frontOfficeList"></table>
+      <button id="inputButton" onclick=index.makeFrontOfficeListDefinitive();>Maak balielijst definitief</button>
+    </div>
+    <div onclick=index.openPage(2);>2. Verdelen</div>
+    <div class="page" id="page2" style="display: none">
+    </div>
+  </body>
+</html>
